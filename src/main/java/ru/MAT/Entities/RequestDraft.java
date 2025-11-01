@@ -16,14 +16,10 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Request {
+public class RequestDraft {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(nullable = false)
-    private Player player;
 
     @Enumerated(EnumType.ORDINAL)
     @Column(nullable = false)
@@ -62,7 +58,7 @@ public class Request {
     private String box3 = "-";
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<RequestMedia> box4 = new ArrayList<>();;
+    private List<RequestMediaDraft> box4 = new ArrayList<>();
 
     @Column(nullable = false, columnDefinition = "TEXT")
     private String box5 = "-";

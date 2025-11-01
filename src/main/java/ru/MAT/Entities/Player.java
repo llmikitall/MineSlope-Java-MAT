@@ -28,10 +28,8 @@ public class Player {
     @Enumerated(EnumType.ORDINAL)
     private UserStatus status = UserStatus.MAIN_MENU;
 
-    @Enumerated(EnumType.ORDINAL)
-    private RequestType requestType;
-
-    private int requestId;
+    @OneToOne(fetch = FetchType.EAGER)
+    private RequestDraft currentRequest;
 
     @Column(nullable = false)
     private boolean messageMainMenu = true;

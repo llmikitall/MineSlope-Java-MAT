@@ -9,7 +9,9 @@ public enum UserStatus {
     ICTP_BOX0("Жалоба: box0"),
     ICTP_BOX1("Жалоба: box1"),
     ICTP_BOX2("Жалоба: box2"),
-    ICTP_BOX4("Жалоба: box4");
+    ICTP_BOX3("Жалоба: box3"),
+    ICTP_BOX4("Жалоба: box4"),
+    ICTP_BOX5("Жалоба: box5");
 
     @Getter
     private final String description;

@@ -4,7 +4,7 @@ import com.pengrad.telegrambot.model.Update;
 import ru.MAT.Entities.Player;
 import ru.MAT.Enums.UserStatus;
 
-public interface BotHandler {
-    boolean CanHandle(String text, UserStatus status);
+public interface BotPhotoHandler {
+    boolean CanPhotoHandle(UserStatus status);
     void Handle(Player player, Update update);
 }
